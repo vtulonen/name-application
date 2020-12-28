@@ -3,6 +3,7 @@ import ListAll from './Components/ListAll'
 import ListNames from './Components/ListNames'
 import ToggleComponent from './Components/ToggleComponent'
 import NamesTotalAmount from './Components/NamesTotalAmount'
+import SearchNameAmount from './Components/SearchNameAmount'
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
      <ToggleComponent  btnText={'Total'} 
       component={<NamesTotalAmount names={names}/>}
      />
+     <SearchNameAmount names={names}/>
 
 
     </div>
