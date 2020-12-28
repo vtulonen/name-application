@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import ListAll from './Components/ListAll'
 function App() {
 
   const [names, setNames] = useState([]);
@@ -13,8 +13,7 @@ function App() {
        }
     })
       .then(response => response.json())
-      .then(data => 
-        setNames(data.names))
+      .then(data => setNames(data.names))
     }
 
   useEffect(()=>{
@@ -22,8 +21,9 @@ function App() {
   },[])
 
   return (
+    
     <div className="app">
-     { console.log(names) }
+     <ListAll names={names}/>
     </div>
   );
 }

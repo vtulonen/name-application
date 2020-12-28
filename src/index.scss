@@ -68,3 +68,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.results {
+	width: 100px;
+	
+	.result {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: .5rem;
+		border-bottom: 1px solid #000;
+	}
+}
+
+
