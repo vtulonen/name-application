@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'
 import ListAll from './Components/ListAll'
+import ListNames from './Components/ListNames'
+import ToggleComponent from './Components/ToggleComponent'
+
 function App() {
 
   const [names, setNames] = useState([]);
@@ -23,7 +26,14 @@ function App() {
   return (
     
     <div className="app">
-     <ListAll names={names}/>
+     <ToggleComponent  btnText={'List all'} 
+      component={<ListAll names={names}/>}
+     />
+     <ToggleComponent  btnText={'List names'} 
+      component={<ListNames names={names}/>}
+     />
+
+
     </div>
   );
 }
