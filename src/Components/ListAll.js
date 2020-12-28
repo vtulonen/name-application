@@ -13,7 +13,7 @@ const ListAll = (props) => {
   )
 }
 
-//Results displayed on click
+// Names and amounts ordered by amount, most popular first
 const ResultsOrderedByAmount = (props) => {
   let sortedItems = props.names.sort((a, b) => b.amount - a.amount);
   
