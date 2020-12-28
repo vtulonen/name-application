@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ListAll from './Components/ListAll'
 import ListNames from './Components/ListNames'
 import ToggleComponent from './Components/ToggleComponent'
+import NamesTotalAmount from './Components/NamesTotalAmount'
 
 function App() {
 
@@ -32,10 +33,13 @@ function App() {
      <ToggleComponent  btnText={'List names'} 
       component={<ListNames names={names}/>}
      />
+     <ToggleComponent  btnText={'Total'} 
+      component={<NamesTotalAmount names={names}/>}
+     />
 
 
     </div>
-  );
+  )
 }
 
 export default App;
