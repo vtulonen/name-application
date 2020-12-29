@@ -1,5 +1,15 @@
-.results.names-total {
+.results.total-names, .results.total-people {
+  margin: 1rem auto;
+
   .result {
-    font-size: 2rem;
+    display:flex;
+    justify-content: center;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+
+    &__amount {
+      margin-left: 1rem;
+      font-weight: bold;
+    }
   }
 }
