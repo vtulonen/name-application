@@ -4,8 +4,8 @@ import React from 'react'
 const ListAll = (props) => {
   let sortedItems = props.names.sort((a, b) => b.amount - a.amount);
   
-  let items = sortedItems.map((item) => 
-    <div className="result">
+  let items = sortedItems.map((item, index) => 
+    <div className="result" key={index}>
       <div className="result__name">{item.name}</div>
       <div className="result__amount">{item.amount}</div>
     </div>

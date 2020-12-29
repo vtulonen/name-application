@@ -4,8 +4,8 @@ import React from 'react'
 const ListNames = (props) => {
   let sortedItems = props.names.sort((a, b) => a.name.localeCompare(b.name));
   
-  let items = sortedItems.map((item) => 
-    <div className="result">
+  let items = sortedItems.map((item, index) => 
+    <div className="result" key={index}>
       <div className="result__name">{item.name}</div>
     </div>
   );
