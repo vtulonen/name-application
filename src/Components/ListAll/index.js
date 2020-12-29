@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.scss'
 
 // List names and amounts ordered by amount, most popular first
 const ListAll = (props) => {

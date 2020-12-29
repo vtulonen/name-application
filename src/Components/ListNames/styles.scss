@@ -1,0 +1,20 @@
+.results.orderd-alphabetically {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 10%;
+
+ 
+
+  .result {
+    
+    margin-bottom: .5rem;
+    justify-self: center;
+    font-size: 2rem;
+    border-bottom: 1px solid #000;
+    text-align: center;
+    
+  }
+
+  
+}

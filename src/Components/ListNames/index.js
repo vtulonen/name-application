@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.scss'
 
 // List names in alphabetical order
 const ListNames = (props) => {
@@ -6,7 +7,7 @@ const ListNames = (props) => {
   
   let items = sortedItems.map((item, index) => 
     <div className="result" key={index}>
-      <div className="result__name">{item.name}</div>
+      {item.name}
     </div>
   );
 

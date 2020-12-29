@@ -1,4 +1,5 @@
 import React from 'react'
+import './styles.scss'
 
 const NamesTotalAmount = (props) => {
   const total = props.names.length

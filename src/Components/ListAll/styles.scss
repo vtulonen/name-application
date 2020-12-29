@@ -1,0 +1,12 @@
+.results.orderd-by-amount {
+	
+	.result {
+    width: 80%;
+    max-width: 769px;
+		display: flex;
+		justify-content: space-between;
+		margin: .5rem auto;
+		border-bottom: 1px dotted #000;
+		font-size: 2rem;
+	}
+}
