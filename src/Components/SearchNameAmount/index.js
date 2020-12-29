@@ -5,19 +5,31 @@ export default function SearchNameAmount(props) {
   const [nameAmount, setNameAmount] = useState(null);
   const { names } = props;
 
+    
   const amountOfName = (name) => {
+    // Returns a string containing the amount for the searched
+    // name or a string informing user that the name was not found
+    
+    if (name.length === 0) return ''; // Dont show anything
     let amount = 0;
+
     names.forEach(item => {
-      if (item.name.toLowerCase() === name.toLowerCase()) {
+      if (item.name === name) {
         amount = item.amount;
       }
     })
-    return amount;
+    
+    if (amount > 0) {
+      name = name.charAt(0).toUpperCase() + name.slice(1);
+      return (`There are ${amount} people named ${name} working at Solita!`)
+    } else {
+      return 'Name not found'
+    }
   }
 
   const handleSearch = e => {
     if (e.key === 'Enter') {
-      setNameAmount(amountOfName(e.target.value))
+      setNameAmount(amountOfName(e.target.value.toLowerCase()))
     }
   }
 
@@ -26,16 +38,20 @@ export default function SearchNameAmount(props) {
   }
 
   return (
-    <div>
-      <input
+    <div className="container">
+      <input className="searchbar"
         onKeyDown={handleSearch}
         onChange={handleChange}
         type="text"
         placeholder="Search name"
         value={searchTarget}
       />
-      <div>
-        {nameAmount}
+      <div className="result search-result">
+      <div className="result__text">
+          {nameAmount}
+        </div>
+        
+        
       </div>
     </div>
   )

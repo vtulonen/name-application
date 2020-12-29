@@ -10,23 +10,37 @@ function App() {
 
   const [names, setNames] = useState([]);
 
+  //JSON properties to lowercase
+  const lower = (obj) => {
+    for (let prop in obj) {
+      if (typeof obj[prop] === 'string') {
+        obj[prop] = obj[prop].toLowerCase();
+      }
+      if (typeof obj[prop] === 'object') {
+        lower(obj[prop]);
+        }
+      }
+    return obj;
+  }
+
   const getNames=()=>{
     fetch('names.json'
     ,{
       headers : { 
         'Content-Type': 'application/json',
         'Accept': 'application/json'
-       }
+      }
     })
       .then(response => response.json())
-      .then(data => setNames(data.names))
-    }
+      .then(data => setNames(lower(data.names)))
+  }
 
   useEffect(()=>{
-    getNames()
+    getNames();
   },[])
 
   return (
+    
     
     <div className="app">
       <Header/>

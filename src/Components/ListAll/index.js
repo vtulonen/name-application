@@ -3,6 +3,7 @@ import './styles.scss'
 
 // List names and amounts ordered by amount, most popular first
 const ListAll = (props) => {
+  console.log(props.names);
   let sortedItems = props.names.sort((a, b) => b.amount - a.amount);
   
   let items = sortedItems.map((item, index) => 
