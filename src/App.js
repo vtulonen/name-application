@@ -4,6 +4,7 @@ import ListNames from './Components/ListNames'
 import ToggleComponent from './Components/ToggleComponent'
 import NamesTotalAmount from './Components/NamesTotalAmount'
 import SearchNameAmount from './Components/SearchNameAmount'
+import Header from './Components/Header'
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
   return (
     
     <div className="app">
+      <Header/>
      <ToggleComponent  btnText={'List all'} 
       component={<ListAll names={names}/>}
      />
