@@ -14,22 +14,20 @@ const NamesTotalAmount = (props) => {
 console.log(totalPeople);
 
   return (
-    <>
-    <div className="results total-names">
+    
+    <div className="results total">
       <div className="result">
-        <div className="result__text">Total amount of different names at Solita:</div>
+        <div className="result__text">Different names at Solita:</div>
         <div className="result__amount">{totalNames}</div>
       </div>
-    </div>
 
-    <div className="results total-people">
       <div className="result">
-        <div className="result__text">Total amount of 
+        <div className="result__text">Total amount of
         people at Solita:</div>
         <div className="result__amount">{totalPeople}</div>
       </div>
     </div>
-    </>
+  
   )
 }
 

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+}
+
+.result.name-amount {
+  margin: 1rem 0;
+  font-size: 1.25rem;
+
+  .result {
+    &__text{
+      text-align: center;
+    }
+    
+  }
+}
+
+em {
+  font-weight: bold;
+}
