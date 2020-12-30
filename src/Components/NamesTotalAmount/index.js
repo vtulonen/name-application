@@ -17,14 +17,14 @@ console.log(totalPeople);
     
     <div className="results total">
       <div className="result">
-        <div className="result__text">Different names at Solita:</div>
-        <div className="result__amount">{totalNames}</div>
+        <div className="result__text">Different names at Solita:<span className="result__amount">{totalNames}</span></div>
+        
       </div>
 
       <div className="result">
-        <div className="result__text">Total amount of
-        people at Solita:</div>
-        <div className="result__amount">{totalPeople}</div>
+        <div className="result__text">Amount of
+        people at Solita:<span className="result__amount">{totalPeople}</span></div>
+        
       </div>
     </div>
   

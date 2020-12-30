@@ -22,7 +22,7 @@ export default function SearchNameAmount(props) {
     
     if (amount > 0) {
       name = name.charAt(0).toUpperCase() + name.slice(1);
-      return (<div className="result__text">There are <em>{amount}</em> people named <em className="underline">{name}</em> working at Solita!</div>)
+      return (<div className="result__text">There are <em>{amount}</em> people named <em>{name}</em> working at Solita!</div>)
     } else {
       return (<div className="result__text">Name not found</div>)
     }
@@ -44,7 +44,7 @@ export default function SearchNameAmount(props) {
         onKeyDown={handleSearch}
         onChange={handleChange}
         type="text"
-        placeholder="Search name"
+        placeholder="Search for a name"
         value={searchTarget}
       />
       <div className="result name-amount">

@@ -9,6 +9,7 @@ import Header from './Components/Header'
 function App() {
 
   const [names, setNames] = useState([]);
+  
 
   //JSON properties to lowercase
   const lower = (obj) => {
@@ -44,6 +45,7 @@ function App() {
     
     <div className="app">
       <Header/>
+      <div class="buttons">
      <ToggleComponent  btnText={'List all'} 
       component={<ListAll names={names}/>}
      />
@@ -53,8 +55,10 @@ function App() {
      <ToggleComponent  btnText={'Total'} 
       component={<NamesTotalAmount names={names}/>}
      />
-     <SearchNameAmount names={names}/>
 
+
+     <SearchNameAmount names={names}/>
+     </div>
 
     </div>
   )

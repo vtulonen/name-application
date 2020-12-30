@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import './styles.scss'
 
 //Toggle button displays results component
 const ToggleComponent = (props) => {
@@ -6,8 +7,8 @@ const ToggleComponent = (props) => {
   const handleClick = () => setShowResults(!showResults)
   const { component, btnText} = props;
   return (
-    <div>
-      <button onClick={handleClick}>{btnText}</button>
+    <div className="btn-container">
+      <button className="btn" onClick={handleClick}>{btnText}</button>
       { showResults ? component : null }
     </div>
   )
