@@ -1,0 +1,26 @@
+@import '../../variables';
+
+.footer {
+  padding-bottom: 1em;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: .8rem;
+
+  &__text {
+    color: $color-gray;
+  }
+
+  &__link {
+    color: $color-gray;
+
+    &:hover {
+      color: $color-accent
+    }
+  }
+
+  
+  
+}

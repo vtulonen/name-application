@@ -5,6 +5,7 @@ import ToggleComponent from './Components/ToggleComponent'
 import NamesTotalAmount from './Components/NamesTotalAmount'
 import SearchNameAmount from './Components/SearchNameAmount'
 import Header from './Components/Header'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -45,7 +46,7 @@ function App() {
     
     <div className="app">
       <Header/>
-      <div class="buttons">
+      <div class="main buttons">
      <ToggleComponent  btnText={'List all'} 
       component={<ListAll names={names}/>}
      />
@@ -59,6 +60,8 @@ function App() {
 
      <SearchNameAmount names={names}/>
      </div>
+
+     <Footer/>
 
     </div>
   )
