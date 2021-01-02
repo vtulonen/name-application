@@ -1,5 +1,30 @@
 @import '../../variables';
 
+
+.btn[tool-tip] {
+  position: relative;
+
+  &:after {
+    content: attr(tool-tip);
+    display: block;
+    position: absolute;
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    background-color: $color-accent;
+    z-index: 99;
+    top: -1.5em;
+    right: -1.5em;
+    color: $color-dark;
+    font-size: $font-size-sm;
+    text-transform: initial;
+    transform: scale(0);
+    transition: transform ease-out 200ms;
+  }
+
+  &:hover::after, &:active::after {
+    transform: scale(1);
+  }
+}
 .btn {
   width: 100%;
   margin: 1rem 0;

@@ -5,10 +5,11 @@ import './styles.scss'
 const ToggleComponent = (props) => {
   const [showResults, setShowResults] = useState(false)
   const handleClick = () => setShowResults(!showResults)
-  const { component, btnText} = props;
+  const { component, btnText, toolTipText} = props;
   return (
     <div className="btn-container">
-      <button className="btn" onClick={handleClick}>{btnText}</button>
+      <button className="btn" tool-tip={toolTipText}
+      onClick={handleClick}>{btnText}</button>
       { showResults ? component : null }
     </div>
   )

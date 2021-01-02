@@ -52,14 +52,14 @@ function App() {
 
       <SearchNameAmount names={names}/>
 
-      <ToggleComponent  btnText={'Total'} 
+      <ToggleComponent  btnText={'Totals'} toolTipText={'Total names at Solita'}
       component={<NamesTotalAmount names={names}/>}
      />
 
-     <ToggleComponent  btnText={'List all'} 
+     <ToggleComponent  btnText={'List all'} toolTipText={'Names ordered by amount'} 
       component={<ListAll names={names}/>}
      />
-     <ToggleComponent  btnText={'List names'} 
+     <ToggleComponent  btnText={'List names'} toolTipText={'Ordered alphabetically'}
       component={<ListNames names={names}/>}
      />
      
