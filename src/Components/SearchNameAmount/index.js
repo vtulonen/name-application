@@ -39,7 +39,7 @@ export default function SearchNameAmount(props) {
   }
 
   return (
-    <div className="container">
+    <div className="search-container">
       <input className="searchbar"
         onKeyDown={handleSearch}
         onChange={handleChange}

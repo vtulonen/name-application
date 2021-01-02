@@ -46,19 +46,26 @@ function App() {
     
     <div className="app">
       <Header/>
+
+      
       <div class="main buttons">
+
+      <SearchNameAmount names={names}/>
+
+      <ToggleComponent  btnText={'Total'} 
+      component={<NamesTotalAmount names={names}/>}
+     />
+
      <ToggleComponent  btnText={'List all'} 
       component={<ListAll names={names}/>}
      />
      <ToggleComponent  btnText={'List names'} 
       component={<ListNames names={names}/>}
      />
-     <ToggleComponent  btnText={'Total'} 
-      component={<NamesTotalAmount names={names}/>}
-     />
+     
 
 
-     <SearchNameAmount names={names}/>
+     
      </div>
 
      <Footer/>
