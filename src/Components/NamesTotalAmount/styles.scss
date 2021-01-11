@@ -1,23 +1,21 @@
-@import '../../variables';
-
+@import "../../variables";
 
 .results.total {
   font-size: $font-size-md;
   .result {
-    display:flex;
+    display: flex;
     justify-content: center;
     text-align: center;
-    
+
     margin-bottom: 1rem;
 
     &__text {
       line-height: 2rem;
-      
     }
     &__amount {
       margin-left: 1rem;
       color: $color-accent;
-			font-weight: bold;
+      font-weight: bold;
     }
   }
 }

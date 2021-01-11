@@ -1,19 +1,19 @@
-@import '../../variables';
+@import "../../variables";
 
 .results.orderd-by-amount {
-	.result {
+  .result {
     width: 80%;
     max-width: 769px;
-		display: flex;
-		justify-content: space-between;
-		margin: .5rem auto;
-		border-bottom: 1px dotted #000;
-		font-size: 1.5rem;
-		text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem auto;
+    border-bottom: 1px dotted #000;
+    font-size: 1.5rem;
+    text-transform: capitalize;
 
-		&__amount {
-			color: $color-accent;
-			font-weight: bold;
-		}
-	}
+    &__amount {
+      color: $color-accent;
+      font-weight: bold;
+    }
+  }
 }

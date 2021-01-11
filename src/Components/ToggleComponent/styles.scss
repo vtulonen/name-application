@@ -1,5 +1,4 @@
-@import '../../variables';
-
+@import "../../variables";
 
 .btn[tool-tip] {
   position: relative;
@@ -8,7 +7,7 @@
     content: attr(tool-tip);
     display: block;
     position: absolute;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
     background-color: $color-accent;
     z-index: 99;
@@ -21,7 +20,8 @@
     transition: transform ease-out 200ms;
   }
 
-  &:hover::after, &:active::after {
+  &:hover::after,
+  &:active::after {
     transform: scale(1);
   }
 }
@@ -34,23 +34,22 @@
   font-size: 1.5rem;
   color: $color-blue;
   background: $color-white;
-  border: .2rem solid $color-blue;
+  border: 0.2rem solid $color-blue;
   border-radius: 5px;
   transition: all 0.3s;
-  
 }
 
 .btn:hover {
   cursor: pointer;
   color: $color-accent;
-  border: .2rem solid $color-accent;
+  border: 0.2rem solid $color-accent;
 }
 
 .btn:focus {
-  border: .2rem solid $color-accent;
+  border: 0.2rem solid $color-accent;
   outline: none;
 }
 
 .btn:active {
-  border: .2rem solid $color-accent;
+  border: 0.2rem solid $color-accent;
 }

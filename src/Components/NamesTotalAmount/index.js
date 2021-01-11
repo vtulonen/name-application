@@ -1,34 +1,35 @@
-import React from 'react'
-import './styles.scss'
+import React from "react";
+import "./styles.scss";
 
 const NamesTotalAmount = (props) => {
   //Different names
-  const totalNames = props.names.length
+  const totalNames = props.names.length;
   //Total amount of people
   let totalPeople = 0;
 
-  props.names.forEach(item => {
-    totalPeople += item.amount
-  })
+  props.names.forEach((item) => {
+    totalPeople += item.amount;
+  });
 
-console.log(totalPeople);
+  console.log(totalPeople);
 
   return (
-    
     <div className="results total">
       <div className="result">
-        <div className="result__text">Different names at Solita:<span className="result__amount">{totalNames}</span></div>
-        
+        <div className="result__text">
+          Different names at Solita:
+          <span className="result__amount">{totalNames}</span>
+        </div>
       </div>
 
       <div className="result">
-        <div className="result__text">Amount of
-        people at Solita:<span className="result__amount">{totalPeople}</span></div>
-        
+        <div className="result__text">
+          Amount of people at Solita:
+          <span className="result__amount">{totalPeople}</span>
+        </div>
       </div>
     </div>
-  
-  )
-}
+  );
+};
 
-export default NamesTotalAmount
+export default NamesTotalAmount;

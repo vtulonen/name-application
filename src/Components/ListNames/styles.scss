@@ -1,15 +1,14 @@
-@import '../../variables';
+@import "../../variables";
 
 .results.orderd-alphabetically {
-
   .result {
     width: 80%;
     max-width: 769px;
-		display: flex;
-		justify-content: center;
-		margin: .5rem auto;
-		border-bottom: 1px dotted $color-accent;
-		font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    margin: 0.5rem auto;
+    border-bottom: 1px dotted $color-accent;
+    font-size: 1.5rem;
     text-transform: capitalize;
-	}
+  }
 }
