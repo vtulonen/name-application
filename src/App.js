@@ -10,21 +10,22 @@ import Footer from "./Components/Footer";
 function App() {
   const [names, setNames] = useState([]);
 
-  //JSON properties to lowercase
-  const lower = (obj) => {
-    for (let prop in obj) {
-      if (typeof obj[prop] === "string") {
-        obj[prop] = obj[prop].toLowerCase();
+  useEffect(() => {
+    //JSON properties to lowercase
+    const lower = (obj) => {
+      for (let prop in obj) {
+        if (typeof obj[prop] === "string") {
+          obj[prop] = obj[prop].toLowerCase();
+        }
+        if (typeof obj[prop] === "object") {
+          lower(obj[prop]);
+        }
       }
-      if (typeof obj[prop] === "object") {
-        lower(obj[prop]);
-      }
-    }
-    console.log(obj);
-    return obj;
-  };
 
-  const getNames = () => {
+      return obj;
+    };
+
+    // Fetch names
     fetch("names.json", {
       headers: {
         "Content-Type": "application/json",
@@ -33,10 +34,6 @@ function App() {
     })
       .then((response) => response.json())
       .then((data) => setNames(lower(data.names)));
-  };
-
-  useEffect(() => {
-    getNames();
   }, []);
 
   return (

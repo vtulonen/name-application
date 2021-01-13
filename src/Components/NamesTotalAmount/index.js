@@ -11,8 +11,6 @@ const NamesTotalAmount = (props) => {
     totalPeople += item.amount;
   });
 
-  console.log(totalPeople);
-
   return (
     <div className="results total">
       <div className="result">
