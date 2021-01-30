@@ -45,7 +45,7 @@ function App() {
 
         <ToggleComponent
           btnText={"Totals"}
-          toolTipText={"Total names at Solita"}
+          toolTipText={"Total names"}
           component={<NamesTotalAmount names={names} />}
         />
 
